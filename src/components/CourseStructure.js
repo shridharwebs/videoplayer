@@ -26,7 +26,8 @@ const CourseStructure = (props) => {
     return (
       <div className="embed-responsive embed-responsive-16by9">
         <iframe
-          className="embed-responsive-item"
+          id="videoplayer"
+          className="embed-responsive-item bg-dark"
           src={"//www.youtube.com/embed/" + vid + "?rel=0"}
           allowFullScreen
         ></iframe>
@@ -46,7 +47,7 @@ const CourseStructure = (props) => {
           <br />
           <br />
         </div>
-        <div className="col-md-8 col-sm-3 bg-black">
+        <div className="col-md-8 col-sm-3">
           {renderVideo()}
           <br />
           <h4>{title}</h4>
@@ -59,6 +60,7 @@ const CourseStructure = (props) => {
             {courses[courseName].map((item) => {
               return (
                 <li
+                  href="#videoplayer"
                   className="list-group-item"
                   onClick={() => {
                     uid(item.vid);
