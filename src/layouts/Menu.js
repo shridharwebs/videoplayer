@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../components/CourseStructure.css";
 
 const Menu = () => {
   return (
-    <div className="container">
-      <nav className="row navbar navbar-expand-lg navbar-light">
+    <div className="container-fluid bg-info mainnav">
+      <nav className="container navbar navbar-expand-lg">
         <Link className="navbar-brand" to="/">
           React Videoplayer
         </Link>

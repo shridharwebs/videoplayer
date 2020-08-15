@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./components/Home";
 import CourseStructure from "./components/CourseStructure";
 import Menu from "./layouts/Menu";
+import "../node_modules/jquery/dist/jquery";
 
 function App() {
   return (
