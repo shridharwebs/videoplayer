@@ -8,12 +8,12 @@ const CourseStructure = (props) => {
     reactjs: [
       { title: "React Js video 1", vid: "8y4Dr9jJtF0" },
       { title: "React Js video 2", vid: "10FNqoPpNbE" },
-      { title: "React Js video 2", vid: "RUku45vpSDU" },
+      { title: "React Js video 3", vid: "RUku45vpSDU" },
     ],
     nodejs: [
       { title: "React Js video 1", vid: "10FNqoPpNbE" },
       { title: "React Js video 2", vid: "RUku45vpSDU" },
-      { title: "React Js video 2", vid: "8y4Dr9jJtF0" },
+      { title: "React Js video 3", vid: "8y4Dr9jJtF0" },
     ],
   };
 
@@ -38,7 +38,9 @@ const CourseStructure = (props) => {
     <div className="container">
       <div class="row">
         <div className="container-fluid">
-          <h4>
+          <br />
+          <br />
+          <h4 className="text-center">
             Welcome to <b>{courseName}</b> course..
           </h4>
           <br />
@@ -48,6 +50,8 @@ const CourseStructure = (props) => {
           {renderVideo()}
           <br />
           <h4>{title}</h4>
+          <br />
+          <br />
         </div>
 
         <div className="col-md-4 col-sm-3">
