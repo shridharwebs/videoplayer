@@ -1,6 +1,9 @@
 .videolist li.active {
   background-color: #09c;
 }
+.videolist li {
+  cursor: pointer;
+}
 .videolist li a {
   text-decoration: none;
 }
