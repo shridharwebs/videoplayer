@@ -1,0 +1,10 @@
+.videolist li.active {
+  background-color: #09c;
+}
+.videolist li a {
+  text-decoration: none;
+}
+.videolist li.active a {
+  color: #fff !important;
+  text-decoration: none;
+}

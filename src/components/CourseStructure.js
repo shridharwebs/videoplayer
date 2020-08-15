@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "../components/CourseStructure.css";
 
 const CourseStructure = (props) => {
   const courseName = props.match.params.coursename;
@@ -19,6 +20,7 @@ const CourseStructure = (props) => {
 
   const [vid, uid] = useState(courses[courseName][0].vid);
   const [title, utit] = useState(courses[courseName][0].title);
+  const [counter, setCounter] = useState(0);
 
   console.log(vid);
 
@@ -26,7 +28,6 @@ const CourseStructure = (props) => {
     return (
       <div className="embed-responsive embed-responsive-16by9">
         <iframe
-          id="videoplayer"
           className="embed-responsive-item bg-dark"
           src={"//www.youtube.com/embed/" + vid + "?rel=0"}
           allowFullScreen
@@ -56,15 +57,19 @@ const CourseStructure = (props) => {
         </div>
 
         <div className="col-md-4 col-sm-3">
-          <ul className="list-group">
-            {courses[courseName].map((item) => {
+          <ul className="list-group videolist">
+            {courses[courseName].map((item, index) => {
               return (
                 <li
-                  href="#videoplayer"
-                  className="list-group-item"
+                  className={
+                    counter == index
+                      ? "list-group-item active"
+                      : "list-group-item"
+                  }
                   onClick={() => {
                     uid(item.vid);
                     utit(item.title);
+                    setCounter(index);
                   }}
                 >
                   <Link>{item.title}</Link>
